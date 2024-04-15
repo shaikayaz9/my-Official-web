@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+
+body {
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: linear-gradient(rgb(82, 249, 255), rgb(187, 28, 226));
+
+}
+
+.Calculater {
+    color: aqua;
+    border: 2px solid black;
+    margin: 10px 15px;
+    padding: 10px;
+}
+
+#text-val {
+    height: 50px;
+    width: 240px;
+    font-size: 20px;
+    padding-right: 10px;
+    border: 2px solid black;
+}
+
+.inp {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 5px 0px;
+
+}
+
+.clear {
+
+    font-size: 15px;
+    margin: 0px 0px 0px 5px;
+    color: white;
+    cursor: pointer;
+    background-color: blue;
+    border: 2px solid black;
+}
+
+.btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.btn button {
+    text-align: center;
+    margin: 1px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.btn button:hover {
+    color: red;
+    background-color: antiquewhite;
+}
+
+.clear:hover {
+    color: black;
+    background-color: blueviolet;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Calculater</h1>
+    <div class="Calculater">
+        <div class="inp">
+            <input type="text" id="text-val" class="screen">
+            <button class="clear" onclick="clr()">clear</button>
+        </div>
+
+        <div class="btn">
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="Calculate('=')">=</button>
+        </div>
+
+    </div>
+    <footer>make by Ayaz shaik &copy; </footer>
+    <script>
+      function clr() {
+    document.getElementById('text-val').value = "";
+}
+
+function display(val) {
+    document.getElementById('text-val').value = document.getElementById('text-val').value + val;
+}
+
+function Calculate() {
+    let x = document.getElementById('text-val').value;
+    let y = eval(x);
+    document.getElementById('text-val').value = y;
+}
+    </script>
+</body>

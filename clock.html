@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+
+body {
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+   background-color: black;
+   color:green;
+}
+
+.clock {
+   position: absolute;
+   top: 45%;
+   left: 40%;
+   color:aqua;
+   font-size: 50px;
+}
+footer{
+  color:white;
+  font-size: 21px;
+  margin-top: 450px;
+}
+</style>
+    <title>Clock</title>
+</head>
+<body>
+    <div id="myclock" class="clock"></div>
+   <footer>Make by Ayaz shaik &copy;</footer>
+    <script>
+       function showtime(){
+   let date = new Date();
+   let h = date.getHours();
+   let m = date.getMinutes();
+   let s = date.getSeconds();
+   let session = "AM";
+
+   if (h == 0)
+    h = 12;
+   
+   
+   
+
+   if (h>12){
+    h = h -12;
+    session = "PM";
+   }
+    
+
+    if(h<10){
+        h = "0"+h;
+    }
+
+    if(m<10){
+        m = "0"+m;
+    }
+    if(s<10){
+        s = "0"+s;
+    }
+   
+   
+    let time = `${h} : ${m} : ${s} ${session}`;
+    document.getElementById("myclock").innerHTML = time;
+    
+setTimeout(showtime, 1000);
+}
+
+
+
+
+showtime();
+    </script>
+</body>
+</html>

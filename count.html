@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+
+body {
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-image: linear-gradient(coral,gold);
+}
+
+button {
+    height: 10vh;
+    width: 15vw;
+    background-color: beige;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+button:hover {
+    opacity: 0.7;
+    color: red;
+}
+
+footer{
+    margin-top:250px;
+}
+
+</style>
+    <title>Counter</title>
+</head>
+<body>
+    <h1 id="count">Counter</h1>
+    <div class="container">
+        <button id="inc" onclick="increment()">+</button>
+        <button id="dic" onclick="dicrement()">-</button>
+        <button id="Reset" onclick="Reset()">clear</button>
+
+    </div>
+     <footer>make by Ayaz shaik &copy;</footer>
+    <script >
+       let count_display = document.getElementById("count");
+let inc = document.getElementById("inc");
+let dic = document.getElementById("dic");
+let reset = document.getElementById("Reset");
+
+let count = 0;
+function increment(){
+    count++ ;
+    count_display.innerHTML = count;
+}
+
+function dicrement(){
+    count-- ;
+    count_display.innerHTML = count;
+}
+function Reset(){
+    count = 0;
+    count_display.innerHTML = 0;
+}
+    </script>
+   
+</body>
+</html>

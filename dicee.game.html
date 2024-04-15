@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background-color: powderblue;
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 black;
+  font-size: 6rem;
+  color: yellow;
+}
+
+p {
+  font-size: 2rem;
+  color: black;
+  font-family: 'Indie Flower', cursive;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: red;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+    text-align: center;
+  display: inline-block;
+}
+
+body {
+  background-color: powderblue;
+}
+
+h1 {
+  margin: 10px;
+  font-family:arial;
+  text-shadow: 2px 0 black;
+  font-size: 4rem;
+  color: red;
+}
+
+p {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+  font-family: 'Indie Flower', cursive;
+}
+
+img {
+  width: 60%;
+}
+
+footer {
+  margin-top: 35%;
+  color: blue;
+  text-align: center;
+   font-weight: 700;
+
+  font-family: 'Indie Flower', cursive;
+
+}
+.flex{
+  display: flex;
+}
+}</style>
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Refresh Me</h1>
+      <div class="flex">
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="dice6.png" />
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2"  src="dice6.png" />
+      </div>
+      </div>
+    </div>
+
+    <footer>Make by Ayaz Shaik</footer>
+    <script>
+      // player 1 code 
+
+let randomnumber1 = Math.floor(Math.random()*6)+1;
+
+let randomimage = "dice"+ randomnumber1+".png";
+
+let image1 =document.querySelectorAll("img")[0];
+
+image1.setAttribute("src",randomimage)
+
+
+// player 2 code 
+
+
+let randomnumber2 = Math.floor(Math.random()*6)+1;
+
+let randomimage2 = "dice"+ randomnumber2+".png";
+
+let image2 =document.querySelectorAll("img")[1].setAttribute("src",randomimage2);
+
+
+
+// player rules who win 
+
+if(randomnumber1>randomnumber2){
+	document.querySelector("h1").innerHTML = "won by player 1";
+}else if(randomnumber1<randomnumber2){
+	document.querySelector("h1").innerHTML = "won by player 2";
+}else{
+	document.querySelector("h1").innerHTML = "Drow match";
+}
+
+
+
+// let img1 = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png"];
+
+// let img2 = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png"];
+    </script>
+  </body>
+</html>

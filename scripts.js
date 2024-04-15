@@ -16,8 +16,8 @@
 
  	let a = document.querySelector("hh5");
  	function mya(){
- 		location.href ="https://wa.me/9381967979/";
- 		alert("hi")
+ 		location.href ="https://github.com/shaikayaz9/";
+ 		alert("here you can see my all project's")
  	}
  	// hide nav bar
 
